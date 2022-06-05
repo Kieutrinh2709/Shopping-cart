@@ -1,0 +1,126 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./js/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 mx-auto">
+        <h3 class="display-4 text-center">Quản Lý sản phẩm</h3>
+        <form id="formQLSP">
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">ID : </label>
+              <input type="text" class="form-control" id="id">
+              <span id="spanId" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Name : </label>
+              <input type="text" class="form-control" id="name">
+              <span id="spanName" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Price </label>
+              <input type="text" class="form-control" id="price">
+              <span id="spanPrice" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Screen  </label>
+              <input type="text" class="form-control" id="screen">
+              <span id="spanScreen" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+              <label for="">Img  </label>
+              <input type="text" class="form-control" id="img">
+              <span id="spanImg" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">BackCamera: </label>
+              <input type="text" class="form-control" id="backCamera">
+              <span id="spanBackCamera" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">FrontCamera : </label>
+              <input type="text" class="form-control" id="frontCamera">
+              <span id="spanFrontCamera" class="text-danger"></span>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+              <label for="">Description: </label>
+              <input type="text" class="form-control" id="desc">
+              <span id="spanDesc" class="text-danger"></span>
+            </div>   
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Type : </label>
+              <input type="text" class="form-control" id="type">
+              <span id="spanType" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Quantity : </label>
+              <input type="text" class="form-control" id="quantity">
+              <span id="spanQuantity" class="text-danger"></span>
+            </div>
+          </div>
+
+          <div class="form-group text-center">
+            <div id="btnAdd">
+              <button type="button" onclick="addProduct()" class="btn btn-success">
+                Thêm Sản Phẩm
+              </button>
+
+              <button type="reset" id="btnReset" class="btn btn-dark">
+                Reset
+              </button>
+            </div>
+            <button id="btnUpdate" style="display: none" type="button" onclick="updateProduct()" class="btn btn-info">
+              Lưu thay đổi
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-8 mx-auto">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Screen</th>
+              <th>Back Camera</th>
+              <th>Front Camera</th>
+              <th>Image</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbodySanPham"></tbody>
+        </table>
+      </div>
+    </div>
+   
+    <script src="./js/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./js/popper.min.js.download" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js.download" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./model/cart.js"></script>
+    <script src="./index.js"></script>
+  </div>
+
+</body></html>
